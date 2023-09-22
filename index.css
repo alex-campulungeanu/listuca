@@ -8,7 +8,7 @@ body {
 
 .center-content{
   position: absolute;
-  top: 120;
+  top: 180;
   left: 0;
   bottom: 0;
   right: 0;
@@ -38,14 +38,15 @@ body {
   font-size: 2vmin;
   line-height: 4vmin;
   padding: 10px;
+  border-radius: 5px;
 }
 
-/* INFO: not sure if i need this class, but whatever */
 .row {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
+  align-items: center;
 }
 
 .text-editor {
@@ -57,17 +58,61 @@ body {
   font-size: 5vmin;
 }
 
-img {
+.editor-img {
   max-height: 50%;
+  margin-right: 5px;
 }
 
-img.center {
+.editor-img.center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#reset {
-  margin: 15px;
+button.danger {
+  margin-top: 15px;
+  background: linear-gradient(to bottom right, #dd909e, #ee0c04f5);
+  border: 0;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+button.danger:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+button.danger:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.divider {
+  display: flex;
+}
+
+.divider:before {
+  content: '';
+  flex: 1
+}
+
+.glow:before {
+  height: 6px;
+  filter: blur(5px);
+  border-radius: 5px;
+  background: linear-gradient(to right, blue, hotpink);
 }

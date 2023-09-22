@@ -32,9 +32,9 @@ Technologies used:
 ```live-server .```
 
 ## TODO:
-- [x] store currentEditor inside a file to prevent refresh loose (use localStorage)
-- [] editor picture should be center on row
 - [] if i press multiple time the editors page should get the lastes showed editor and place him 
+- [] add new button (enter e.g) to validate the placed action (so i can go to the next editor)
+- [x] store currentEditor inside a file to prevent refresh loose (use localStorage)
+- [x] editor picture should be center on row
 - [x] remember already voted and store them in localStorage
 - [x] add legend behind Reset button
-- [] add new button (enter e.g) to validate the placed action (so i can go to the next editor)

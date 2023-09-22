@@ -12,9 +12,22 @@ let placedEditor = null
 let placedRow = null
 
 function resetStats() {
-  // TODO: add a confirmation modal
-  localStorage.removeItem(storageName)
-  location.reload()
+  Notiflix.Confirm.show(
+    'Reset the list',
+    'Are you sure you want to reset the list ?',
+    'Yes',
+    'No',
+    function okCb() {
+      localStorage.removeItem(storageName)
+      location.reload()
+    },
+    function cancelCb() {
+    },
+    {
+      width: '320px',
+      borderRadius: '8px',
+    },
+  );
 }
 
 function initValues() {
@@ -61,10 +74,9 @@ function createTierSection() {
 function createImg(editorName, makeBig=false) {
   const img = document.createElement('img')
   img.src = `editors/${editorName}`
+  img.classList.add('editor-img')
   if(makeBig) {
-    img.className = 'center'
-  } else {
-    img.className = ''
+    img.classList.add('center')
   }
   return img
 }
